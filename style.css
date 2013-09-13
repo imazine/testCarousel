@@ -1,0 +1,116 @@
+/* 
+	Carousel Cascading Style Sheet - Candidate Test for Favorite Medium 
+	13th, September, 2013.
+
+	Irho Park 
+	aka. iMaZiNe
+
+*/
+
+/* Define Carousel Animation */
+	@-webkit-keyframes carousel{
+	0%  {left:0px;}
+	28% {left:0px;}
+	33% {left:-1024px;}
+	61% {left:-1024px;}
+	67% {left:-2048px;}
+	95% {left:-2048px;}
+	100% {left:0px;}
+	}
+
+/* Define Horse Animation */
+	@-webkit-keyframes horse{
+	0%  {
+		color: rgba(149, 0, 0, 0.8);
+	}
+	28% {
+		color: rgba(149, 0, 0, 0.8)
+	}
+	33% {color: rgba(0, 0, 0, 0.8)}
+	99% {color: rgba(0, 0, 0, 0.8)}
+	}
+
+/* Browser Reset & Initializing Document Section */
+
+	/* Reset elements with new HTML5 */
+	body, section, div, ul, li, dl, dd, dt, nav, aside, hgroup, header, footer, article{
+		padding: 0;
+		margin: 0;
+		border: 0;
+		display: block;
+	}
+
+	/* Page Style Initializing */
+	body{
+		width: 100%;
+		top: 0;
+		left: 0;
+		font-family: 'Oswald', sans-serif;
+		letter-spacing: -1px;
+		word-spacing: 1px;
+		background-color: #000;
+	}
+
+	#carouselWrapper{
+		position: relative;
+		top: -200px;
+		width: 1024px;
+		height: 400px;
+		margin: 50% auto -400px;
+		overflow: hidden;
+	}
+
+	#carouselWrapper:hover ~ .carousel{
+		-webkit-animation: none;
+	}
+
+		.carousel{
+			position: absolute;
+			width: 4000px;
+			display: inline;
+			-webkit-animation: carousel 12s infinite;
+			-webkit-animation-timing-function: ease-out;
+		}
+
+			.carousel .label{
+				position: relative;
+				display: inline-block;
+				top: -143px;
+				right: 365px;
+				width: 362px;
+				height: 148px;
+				margin-right: -368px;
+				color: rgba(149, 0, 0, 0.8);
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+				background: url('./assets/carousel-label-box.png') no-repeat;
+			}
+
+			.carousel .horseAnimation{
+				-webkit-animation: horse 12s infinite;
+				-webkit-animation-timing-function: ease-out;
+			}
+
+			.carousel .horse2{
+				-webkit-animation-delay: 4.4s;
+			}
+
+			.carousel .horse3{
+				-webkit-animation-delay: 8.8s;
+			}
+
+			.carousel .label h1,
+			.carousel .label p{
+				margin: 0;
+				padding: 10px;
+			}
+
+			.carousel .inactive{
+				color: rgba(0, 0, 0, 0.8);
+			}
+
+			.carousel li{
+				display: inline;
+			}
+
+			.carousel img{
+			}
